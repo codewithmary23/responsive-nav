@@ -1,0 +1,118 @@
+/****************************
+CSS RESET
+*****************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/****************************
+MOBILE FIRST
+*****************************/
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #faa8b6;
+  border-bottom: 0.2em #5a3c3c solid;
+}
+
+nav {
+  display: none;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  margin: 0.6em 0 1em 0;
+  color: #5a3c3c;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav li {
+  list-style: none;
+}
+
+.nav-toggle-label {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  text-align: right;
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  position: relative;
+  display: block;
+  background: white;
+  height: 4px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.logo {
+  color: #5a3c3c;
+  letter-spacing: 1px;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + nav {
+  display: block;
+}
+
+.content {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background-image: url(img/nature.jpg);
+  background-color: #aaa;
+  background-blend-mode: multiply;
+  background-size: cover;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}
+
+/****************************
+FOR DESKTOPS AND TABLETS
+*****************************/
+@media screen and (min-width: 800px) {
+  nav {
+    display: block;
+  }
+  nav a {
+    font-size: 1.1rem;
+    text-transform: none;
+  }
+  a:hover,
+  a:focus {
+    color: #b45b5b;
+    letter-spacing: normal;
+    transition: all 0.15s linear;
+  }
+  ul {
+    display: flex;
+    position: absolute;
+    right: 0.8rem;
+    top: 0.8rem;
+  }
+  ul li {
+    margin-left: 2.3rem;
+  }
+  .nav-toggle-label {
+    display: none;
+  }
+  .content {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+}
